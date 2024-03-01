@@ -27,3 +27,20 @@ UNION TYPES ---------------------------
 -> Union types é quando você tem uma variável e precisa dar a ela mais de um tipo
 -> Para fazer o Union Type em uma variável basta fazer `let nomeNumeros:string|number|boolean` ou `let nomeNumeros:any`
 -> O Union type deve ser evitado e ser usado apenas em casos necessários, pois se não Typescript perde seu significado
+
+## Aula 06
+
+ARRAY --------------------------------
+
+-> Existem diversas formas de definir o tipo de um Array no Typescript:
+-> `let aNumeros:number[] = [20,30,40]`
+-> `let bNumeros:Array<number|string>=[20,30,40]`
+-> `let cNumeros:(number|string)[]=[20,30,40,"Ryan"]`
+
+ARRAY READONLY ------------------------
+
+-> É um tipo de array onde ele só pode ser lido
+-> Seus métodos se baseiam na leitura, métodos como "push, pop, shift, unshift" não podem ser chamados
+-> `let dNumeros:ReadonlyArray<number>=[100,200,300]`
+
+
