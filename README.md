@@ -3,7 +3,7 @@
 
 ## Aula 04
 
-WATCH --------------------------
+### WATCH --------------------------
 
 -> tsc --watch |  tsc -w <br>
 -> Watch faz com que o compilador compile automaticamente todas alterações feitas no arquivo Typescript <br>
