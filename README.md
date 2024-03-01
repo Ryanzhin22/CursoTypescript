@@ -3,12 +3,12 @@
 
 ## Aula 04
 
-### WATCH --------------------------
+### WATCH 
 
 -> tsc --watch |  tsc -w <br>
 -> Watch faz com que o compilador compile automaticamente todas alterações feitas no arquivo Typescript <br>
 
-TYPE INFERENCE ----------------
+### TYPE INFERENCE
 
 -> Por ser uma linguagem fortemente tipada, é necessário tipar todos as variaveis criadas <br>
 -> Existe o tipo ANY, mas não deve ser usado para tudo, se não o typescript perde o sentido <br> 
@@ -17,12 +17,12 @@ TYPE INFERENCE ----------------
 
 ## Aula 05
 
-DEFINIR TIPO DE ARRAY -------------------
+### DEFINIR TIPO DE ARRAY
 
 -> Para definir o tipo de um array basta colocar o seguinte formato `let array string:[] = []` 
 -> O array pode ter mais de um tipo assim como as variáveis (Union Types)
 
-UNION TYPES ---------------------------
+### UNION TYPES
 
 -> Union types é quando você tem uma variável e precisa dar a ela mais de um tipo
 -> Para fazer o Union Type em uma variável basta fazer `let nomeNumeros:string|number|boolean` ou `let nomeNumeros:any`
@@ -30,14 +30,14 @@ UNION TYPES ---------------------------
 
 ## Aula 06
 
-ARRAY --------------------------------
+### ARRAY
 
 -> Existem diversas formas de definir o tipo de um Array no Typescript:
 -> `let aNumeros:number[] = [20,30,40]`
 -> `let bNumeros:Array<number|string>=[20,30,40]`
 -> `let cNumeros:(number|string)[]=[20,30,40,"Ryan"]`
 
-ARRAY READONLY ------------------------
+### ARRAY READONLY 
 
 -> É um tipo de array onde ele só pode ser lido
 -> Seus métodos se baseiam na leitura, métodos como "push, pop, shift, unshift" não podem ser chamados
