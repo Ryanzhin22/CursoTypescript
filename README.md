@@ -19,36 +19,36 @@
 
 ### DEFINIR TIPO DE ARRAY
 
--> Para definir o tipo de um array basta colocar o seguinte formato `let array string:[] = []` 
+-> Para definir o tipo de um array basta colocar o seguinte formato `let array string:[] = []` <br>
 -> O array pode ter mais de um tipo assim como as variáveis (Union Types)
 
 ### UNION TYPES
 
--> Union types é quando você tem uma variável e precisa dar a ela mais de um tipo
--> Para fazer o Union Type em uma variável basta fazer `let nomeNumeros:string|number|boolean` ou `let nomeNumeros:any`
--> O Union type deve ser evitado e ser usado apenas em casos necessários, pois se não Typescript perde seu significado
+-> Union types é quando você tem uma variável e precisa dar a ela mais de um tipo <br>
+-> Para fazer o Union Type em uma variável basta fazer `let nomeNumeros:string|number|boolean` ou `let nomeNumeros:any` <br>
+-> O Union type deve ser evitado e ser usado apenas em casos necessários, pois se não Typescript perde seu significado 
 
 ## Aula 06
 
 ### ARRAY
 
--> Existem diversas formas de definir o tipo de um Array no Typescript:
--> `let aNumeros:number[] = [20,30,40]`
--> `let bNumeros:Array<number|string>=[20,30,40]`
+-> Existem diversas formas de definir o tipo de um Array no Typescript: <br>
+-> `let aNumeros:number[] = [20,30,40]` <br> 
+-> `let bNumeros:Array<number|string>=[20,30,40]` <br>
 -> `let cNumeros:(number|string)[]=[20,30,40,"Ryan"]`
 
 ### ARRAY READONLY 
 
--> É um tipo de array onde ele só pode ser lido
--> Seus métodos se baseiam na leitura, métodos como "push, pop, shift, unshift" não podem ser chamados
--> `let dNumeros:ReadonlyArray<number>=[100,200,300]`
+-> É um tipo de array onde ele só pode ser lido <br>
+-> Seus métodos se baseiam na leitura, métodos como "push, pop, shift, unshift" não podem ser chamados <br>
+-> `let dNumeros:ReadonlyArray<number>=[100,200,300]` <br>
 -> Não existe no Javascript
 
 ## Aula 07
 
 ### Tuplas 
 
--> Para definir uma sequência em um array, o seguinte comando é utilizado: `let coisas:[string,number,boolean]=["Corda", 10, true]` nesse caso, os 3 valores poderão ser adicionado somente na ordem "string,number e boolean"
--> É possível adicionar mais elementos com o PUSH ou o POP, porém ao puxar eles com o `console.log()` um erro será exibido
+-> Para definir uma sequência em um array, o seguinte comando é utilizado: `let coisas:[string,number,boolean]=["Corda", 10, true]` nesse caso, os 3 valores poderão ser adicionado somente na ordem "string,number e boolean" <br>
+-> É possível adicionar mais elementos com o PUSH, POP ou `coisas[2]=false`, porém, ao puxar eles com o `console.log()` um erro será exibido <br>
 -> `let coisas:readonly[string,number,boolean]=["Corda", 10, true]` ao fazer isso, a Tupla não poderá mais ser utilizada em métodos de modificação de array
 
