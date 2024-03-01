@@ -42,5 +42,13 @@
 -> É um tipo de array onde ele só pode ser lido
 -> Seus métodos se baseiam na leitura, métodos como "push, pop, shift, unshift" não podem ser chamados
 -> `let dNumeros:ReadonlyArray<number>=[100,200,300]`
+-> Não existe no Javascript
 
+## Aula 07
+
+### Tuplas 
+
+-> Para definir uma sequência em um array, o seguinte comando é utilizado: `let coisas:[string,number,boolean]=["Corda", 10, true]` nesse caso, os 3 valores poderão ser adicionado somente na ordem "string,number e boolean"
+-> É possível adicionar mais elementos com o PUSH ou o POP, porém ao puxar eles com o `console.log()` um erro será exibido
+-> `let coisas:readonly[string,number,boolean]=["Corda", 10, true]` ao fazer isso, a Tupla não poderá mais ser utilizada em métodos de modificação de array
 
