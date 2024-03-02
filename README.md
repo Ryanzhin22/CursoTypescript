@@ -1,11 +1,13 @@
 # CursoTypescript
- Curso de Typescript em desenvolvimento através do canal CFB Cursos
+Resumos das aulas do Curso de Typescript desenvolvido através do canal CFB Cursos - Em desenvolvimento <br>
+Curso Typescript: https://www.youtube.com/watch?v=vcpLrIzIKjI&list=PLx4x_zx8csUhtPMrkiGvFJVE5LX8Qat5s&index=1&pp=iAQB <br>
+Canal CFB Cursos: https://www.youtube.com/@cfbcursos
 
 ## Aula 04
 
 ### WATCH 
 
--> tsc --watch |  tsc -w <br>
+-> É possível usar o watch usando os comandos: `tsc --watch` |  `tsc -w` <br>
 -> Watch faz com que o compilador compile automaticamente todas alterações feitas no arquivo Typescript <br>
 
 ### TYPE INFERENCE
@@ -13,7 +15,7 @@
 -> Por ser uma linguagem fortemente tipada, é necessário tipar todos as variaveis criadas <br>
 -> Existe o tipo ANY, mas não deve ser usado para tudo, se não o typescript perde o sentido <br> 
 -> É possível definir uma variável de todos os tipos string, number, boolean, etc... <br>
--> Para fazer a tipagem basta colocar o tipo da variavel após sua definição Ex: "let nome:string", "const idade:number" <br>
+-> Para fazer a tipagem basta colocar o tipo da variavel após sua definição Ex: `let nome:string`, `const idade:number` <br>
 
 ## Aula 05
 
@@ -80,16 +82,16 @@
 
 ### UNDEFINED
 
--> Valor Indefinido
--> Undefined não é um tipo que se pode colocar em uma variável
+-> Valor Indefinido <br> 
+-> Undefined não é um tipo que se pode colocar em uma variável <br>
 -> Quando uma variável não receber valor, ela é UNDEFINED (valor não associado)
 
 ### UNKNOWN
 
 -> Valor Desconhecido
--> Ao mostrar no console a variável `let aNome3:unknown` seu output é `undefined`
--> Ao mostrar no console a variável `let aNome3:unknown=10` seu output é `10`
--> Ao colocar o valor de nome em outra variável SEM TIPO, seu tipo automaticamente vai para unknown e seu output passa a ser `10` também
--> Porém, ao colocar o valor de nome em outra variável COM TIPO, o typescript não permitirá. Por mais que ele tenha recebido um número, ele NÃO É DO TIPO NUMBER.
--> Só pode ser atribuido em variáveis do tipo UNKNOWN e ANY
+-> Ao mostrar no console a variável `let aNome3:unknown` seu output é `undefined` <br>
+-> Ao mostrar no console a variável `let aNome3:unknown=10` seu output é `10` <br>
+-> Ao colocar o valor de nome em outra variável SEM TIPO, seu tipo automaticamente vai para unknown e seu output passa a ser `10` também <br>
+-> Porém, ao colocar o valor de nome em outra variável COM TIPO, o typescript não permitirá. Por mais que ele tenha recebido um número, ele NÃO É DO TIPO NUMBER. <br>
+-> Só pode ser atribuido em variáveis do tipo UNKNOWN e ANY <br>
 -> Unknown pode receber qualquer valor
