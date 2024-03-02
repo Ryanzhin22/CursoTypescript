@@ -61,3 +61,35 @@
 -> É possível fazer funções em objetos seguindo essa estrutura `cumprimento:()=>{console.log(`Olá, ${dados.nome}`)},` <br>
 -> Se uma função tem um parâmetro, é necessário passar a tipagem dele também `info:(p:string)=>{console.log(p)}`
     
+## Aula 09
+
+### ENUM
+
+-> Em TypeScript, enum é uma estrutura de dados que permite definir um conjunto de constantes nomeadas. <br>
+-> Eles podem seguir uma estrutura automática onde os valores serão automaticamente incrementados `enum dias {domingo,segunda,terca,quarta,quinta,sexta,sabado}` cada elemento tem o respectivo valor: 0,1,2,3,4,5,6 sendo terça=2 <br>
+-> console.log(dias.domingo) output: `0`, console.log(dias['domingo']) output: `0`, console.log(dias[0]) output: `domingo` <br>
+-> Também é possível definir os valores da estrutura `enum tipoUsuario{USER=100, ADMIN=200, SUPER=300}` <br>
+-> Utilizando enum com strings (de forma textual) só é possível retornar o valor passado nos enumeradores.
+
+## Aula 10
+
+### NULL
+
+-> Valor NULO
+-> O nulo é UM TIPO, portanto uma variável pode receber a tipagem `null`. Exemplo: `let aNome:string|null`, porém, ela ainda precisa ser definida com o tipo nulo, não podendo ficar vazia: `aNome=null` <br>
+
+### UNDEFINED
+
+-> Valor Indefinido
+-> Undefined não é um tipo que se pode colocar em uma variável
+-> Quando uma variável não receber valor, ela é UNDEFINED (valor não associado)
+
+### UNKNOWN
+
+-> Valor Desconhecido
+-> Ao mostrar no console a variável `let aNome3:unknown` seu output é `undefined`
+-> Ao mostrar no console a variável `let aNome3:unknown=10` seu output é `10`
+-> Ao colocar o valor de nome em outra variável SEM TIPO, seu tipo automaticamente vai para unknown e seu output passa a ser `10` também
+-> Porém, ao colocar o valor de nome em outra variável COM TIPO, o typescript não permitirá. Por mais que ele tenha recebido um número, ele NÃO É DO TIPO NUMBER.
+-> Só pode ser atribuido em variáveis do tipo UNKNOWN e ANY
+-> Unknown pode receber qualquer valor
