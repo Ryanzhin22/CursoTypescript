@@ -48,6 +48,7 @@
 
 ### Tuplas 
 
+-> Em TypeScript, uma tupla é uma estrutura de dados que permite armazenar uma coleção ordenada de elementos, onde cada elemento pode ser de um tipo diferente. <br>
 -> Para definir uma sequência em um array, o seguinte comando é utilizado: `let coisas:[string,number,boolean]=["Corda", 10, true]` nesse caso, os 3 valores poderão ser adicionado somente na ordem "string,number e boolean" <br>
 -> É possível adicionar mais elementos com o PUSH, POP ou `coisas[2]=false`, porém, ao puxar eles com o `console.log()` um erro será exibido <br>
 -> `let coisas:readonly[string,number,boolean]=["Corda", 10, true]` ao fazer isso, a Tupla não poderá mais ser utilizada em métodos de modificação de array
