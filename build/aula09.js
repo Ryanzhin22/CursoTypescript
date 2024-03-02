@@ -1,0 +1,34 @@
+"use strict";
+var dias;
+(function (dias) {
+    dias[dias["domingo"] = 0] = "domingo";
+    dias[dias["segunda"] = 1] = "segunda";
+    dias[dias["terca"] = 2] = "terca";
+    dias[dias["quarta"] = 3] = "quarta";
+    dias[dias["quinta"] = 4] = "quinta";
+    dias[dias["sexta"] = 5] = "sexta";
+    dias[dias["sabado"] = 6] = "sabado";
+})(dias || (dias = {}));
+console.log(dias[1]);
+const d = new Date();
+var cores;
+(function (cores) {
+    cores["branco"] = "#fff";
+    cores["preto"] = "#000";
+    cores["vermelho"] = "#F00";
+    cores["verde"] = "#0F0";
+    cores["azul"] = "#00F";
+})(cores || (cores = {}));
+console.log(cores.branco);
+console.log(cores['branco']);
+var tipoUsuario;
+(function (tipoUsuario) {
+    tipoUsuario[tipoUsuario["USER"] = 100] = "USER";
+    tipoUsuario[tipoUsuario["ADMIN"] = 200] = "ADMIN";
+    tipoUsuario[tipoUsuario["SUPER"] = 300] = "SUPER";
+})(tipoUsuario || (tipoUsuario = {}));
+console.log(tipoUsuario.USER);
+let tp = 100;
+let tp2 = tipoUsuario.USER;
+console.log(tp, tp2);
+console.log(tipoUsuario[100]);

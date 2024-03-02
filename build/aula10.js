@@ -1,0 +1,11 @@
+"use strict";
+let aNome;
+aNome = null;
+console.log(aNome);
+let aNome2;
+console.log(aNome2);
+let aNome3 = 10;
+let aNum = aNome3;
+console.log(aNum);
+let aNome4 = aNome3;
+console.log(aNome4);

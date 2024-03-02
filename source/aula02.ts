@@ -1,5 +1,5 @@
-const nome = "Ryan"
+const Mnome = "Ryan"
 const sobrenome = "Barbosa"
 const idade = 18
 
-console.log(nome, sobrenome, idade)
+console.log(Mnome, sobrenome, idade)
