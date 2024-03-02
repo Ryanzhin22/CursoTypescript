@@ -53,3 +53,11 @@
 -> É possível adicionar mais elementos com o PUSH, POP ou `coisas[2]=false`, porém, ao puxar eles com o `console.log()` um erro será exibido <br>
 -> `let coisas:readonly[string,number,boolean]=["Corda", 10, true]` ao fazer isso, a Tupla não poderá mais ser utilizada em métodos de modificação de array
 
+## Aula 08
+
+### Objeto
+
+-> Se uma variável segue esse padrão `let dados={nome: "Douglas", idade: 25, status: "Ativo"}` o Typescript já entende que ele é um objeto, não sendo necessário nomear ele como um <br>
+-> É possível fazer funções em objetos seguindo essa estrutura `cumprimento:()=>{console.log(`Olá, ${dados.nome}`)},` <br>
+-> Se uma função tem um parâmetro, é necessário passar a tipagem dele também `info:(p:string)=>{console.log(p)}`
+    
