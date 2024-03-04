@@ -155,12 +155,22 @@ Canal CFB Cursos: https://www.youtube.com/@cfbcursos
 
 ### PARÂMETROS PADRÕES
 
--> É possível fazer um parâmetro padrão para um função, caso não seja passada nada para o mesmo
--> `function soma(n1:number=1, n2:number=3):number{ //conteudo }`
+-> É possível fazer um parâmetro padrão para um função, caso não seja passada nada para o mesmo <br>
+-> `function soma(n1:number=1, n2:number=3):number{ //conteudo }` <br>
 -> No caso acima, a variável n1 receberá por padrão 1 e a n2 receberá 3, caso nenhum valor for passado
 
 ### PARÂMETROS OPCIONAIS
 
--> Também é possível definir um parâmetro opcional. Caso o parâmetro não seja preenchido, o sistema retornará o mesmo como UNDEFINED
--> `function novoUser(user:string, password:string, name?:string):void{ //conteudo }`
+-> Também é possível definir um parâmetro opcional. Caso o parâmetro não seja preenchido, o sistema retornará o mesmo como UNDEFINED <br>
+-> `function novoUser(user:string, password:string, name?:string):void{ //conteudo }` <br>
 -> Se caso `name` não for passado, seu valor padrão será UNDEFINED
+
+## Aula 14
+
+### ARROW FUNCTION
+
+-> As arrow function não são lidas primeiro no código como as functions padrões do Javascript, e sua sintaxe também é diferente <br>
+-> Assim como no Javascript é possível utilizar de funções anônimas no seu código <br>
+-> Elas tem a seguinte estrutura: `const teste = (txt:string):void => { //conteudo }` 
+
+## Aula 15
