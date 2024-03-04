@@ -3,6 +3,31 @@ Resumos das aulas do Curso de Typescript desenvolvido através do canal CFB Curs
 Curso Typescript: https://www.youtube.com/watch?v=vcpLrIzIKjI&list=PLx4x_zx8csUhtPMrkiGvFJVE5LX8Qat5s&index=1&pp=iAQB <br>
 Canal CFB Cursos: https://www.youtube.com/@cfbcursos
 
+## Aula 01
+
+### Ambiente
+
+-> Necessário instalar:
+-> Visual Studio Code
+-> Node.js
+-> Typescript (por npm)
+
+## Aula 02
+
+### COMPILAR TS
+
+-> É possível compilar um arquivo Typescript usando o comando `tsc nomeArquivo.ts`
+-> Também é possível usar o watch
+
+## Aula 03
+
+### CONFIGURANDO ARQUIVO
+
+-> O comando `tsc --init` faz com que um arquivo Typescript de configurações seja inicializado na pasta do projeto
+-> O `target` com o resultado de "ESNext" faz com que o typescript compile os arquivos na última versão do ECMAscript
+-> O `rootDirs` com o resultado de ["./source"] faz com que todos os arquivos Typescript fiquem na pasta source
+-> O `outDir` com resultado de ["./build"] faz com que todos arquivos compilados em Javascript fiquem na pasta build
+
 ## Aula 04
 
 ### WATCH 
