@@ -137,13 +137,30 @@ Canal CFB Cursos: https://www.youtube.com/@cfbcursos
 
 ## Aula 12
 
-### FUNÇÕES
+### FUNÇÕES VOID
 
--> FUNÇÃO VOID: <br>
 -> `function logar(user:string,password:string):void{ // conteúdo }` <br>
 -> A palavra-chave `void` é usada para indicar que uma função não retorna nenhum valor, ou seja, ela pode fazer uma operação mas o resultado não pode ser acomplado em nenhuma variável. <br>
--> FUNÇÂO COM TIPO: <br>
+
+### FUNÇÕES COM TIPO
+
 -> `function soma2(n1:number, n2:number):number{ // conteúdo + return em NUMBER }` <br>
 -> Da mesma forma que o `void` não retorna nada, o `number` irá retornar um valor numérico capaz de ser associado a uma variável <br>
--> CONVERSÃO DE VALOR COM RESULTADO DE FUNÇÃO:  <br>
+
+### CONVERSÃO DE VALOR COM RESULTADO DE FUNÇÃO
+
 -> Ao fazer uma função (exemplo numérica) e colocar o valor em uma variável, é possível mudar o tipo da variável da seguinte forma: `let somaString:string = soma2(8,2).toString()`
+
+## Aula 13
+
+### PARÂMETROS PADRÕES
+
+-> É possível fazer um parâmetro padrão para um função, caso não seja passada nada para o mesmo
+-> `function soma(n1:number=1, n2:number=3):number{ //conteudo }`
+-> No caso acima, a variável n1 receberá por padrão 1 e a n2 receberá 3, caso nenhum valor for passado
+
+### PARÂMETROS OPCIONAIS
+
+-> Também é possível definir um parâmetro opcional. Caso o parâmetro não seja preenchido, o sistema retornará o mesmo como UNDEFINED
+-> `function novoUser(user:string, password:string, name?:string):void{ //conteudo }`
+-> Se caso `name` não for passado, seu valor padrão será UNDEFINED
