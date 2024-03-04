@@ -102,7 +102,7 @@ Canal CFB Cursos: https://www.youtube.com/@cfbcursos
 
 ### NULL
 
--> Valor NULO
+-> Valor NULO <br>
 -> O nulo é UM TIPO, portanto uma variável pode receber a tipagem `null`. Exemplo: `let aNome:string|null`, porém, ela ainda precisa ser definida com o tipo nulo, não podendo ficar vazia: `aNome=null` <br>
 
 ### UNDEFINED
@@ -120,3 +120,30 @@ Canal CFB Cursos: https://www.youtube.com/@cfbcursos
 -> Porém, ao colocar o valor de nome em outra variável COM TIPO, o typescript não permitirá. Por mais que ele tenha recebido um número, ele NÃO É DO TIPO NUMBER. <br>
 -> Só pode ser atribuido em variáveis do tipo UNKNOWN e ANY <br>
 -> Unknown pode receber qualquer valor
+
+## Aula 11
+
+### TYPE ASSERTION
+
+-> Ao tentar associar uma variável originalmente do tipo unknown a outra com outro tipo, o Typescript não permitirá <br>
+-> Por isso será necessário fazer um Type Assertion `varNumber = <number>varUnknown` <br>
+-> Type Assertion funciona para o tipo UNKNOWN, portanto se precisar utilizar isso em variáveis que são seguem outras tipagens, será necessário primeiramente converter para UNKNOWN: `varNumber=<number><unknown>varString`
+
+### TYPECAST 
+
+-> O Typecast irá ser útil para a conversão de tipos <br>
+-> Caso seja necessário ir de String para Number: `varNumber = Number.parseInt(varString)` <br>
+-> Caso seja necessário ir de Number para String: `varString = varNumber.toString()`
+
+## Aula 12
+
+### FUNÇÕES
+
+-> FUNÇÃO VOID: <br>
+-> `function logar(user:string,password:string):void{ // conteúdo }` <br>
+-> A palavra-chave `void` é usada para indicar que uma função não retorna nenhum valor, ou seja, ela pode fazer uma operação mas o resultado não pode ser acomplado em nenhuma variável. <br>
+-> FUNÇÂO COM TIPO: <br>
+-> `function soma2(n1:number, n2:number):number{ // conteúdo + return em NUMBER }` <br>
+-> Da mesma forma que o `void` não retorna nada, o `number` irá retornar um valor numérico capaz de ser associado a uma variável <br>
+-> CONVERSÃO DE VALOR COM RESULTADO DE FUNÇÃO:  <br>
+-> Ao fazer uma função (exemplo numérica) e colocar o valor em uma variável, é possível mudar o tipo da variável da seguinte forma: `let somaString:string = soma2(8,2).toString()`
