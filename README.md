@@ -239,8 +239,50 @@ Canal CFB Cursos: https://www.youtube.com/@cfbcursos
 
 -> Para acessar um parâmetro da classe pai na classe filha, protegendo o mesmo de ser modificado externamente, é necessário usar o PROTECTED no que será utilizado.
 
-## Aula 23 
+## Aula 23 e 24
 
-## HERANÇA - PROTECTED PT2
+### HERANÇA - PROTECTED PT2
 
 -> Para usar um método da classe pai na classe filha, fazendo modificações no mesmo, basta chamá-lo pelo super: `super.info()` e logo em seguida fazer as moficações necessárias: `console.log(cpf...)`
+
+## Aula 25
+
+### GETTER E SETTER
+
+-> Getter: Vai PEGAR um elemento (GET) <br>
+-> Setter: Vai SETTAR um elemento, modificando seu valor (SET) <br>
+-> Ao aplicar `get` ou `set` em um método, não é necessário usá-lo como função, pois ele vira uma propriedade <br>
+-> É possível modificar o acesso de um get ou set (Private, public ou protected)
+
+## Aula 26 
+
+### CLASSES ABSTRATAS
+
+-> Uma classe abstrata não pode ser instanciada, pode apenas ser herdada e servindo como base para outras classes <br>
+-> Não é possível criar um objeto com uma classe abstrata: Classe: `abstract class Conta{//conteudo}` Instanciar: `const c3 = new Conta("Nome")` = Erro <br>
+-> Também é possível aplicar `readonly` as propriedades onde a mesma não poderá ser modificada nem mesmo dentro da classe pai.
+
+## Aula 27
+
+### OBJETOS LITERAIS
+
+-> Para criar um objeto literal basta seguir a seguinte estrutura: `let curso1:{titulo:string, desc:string}` <br>
+-> Para preencher o objeto literal faça o seguinte: `curso1={titulo:"Typescript", desc:"Curso de Typescript"}` <br>
+-> Porém, para criar mais "cursos" será necessário repetir essas mesmas estruturas várias vezes, e isso poderia ser facilitado com a criação de uma Interface
+
+### INTERFACE
+
+-> Parecido com um objeto litaral para criar uma interface basta fazer: `interface curso{titulo:string, desc:string}` <br>
+-> Para criar vários cursos de forma mais fácil é só fazer: `let curso1:curso` e preencher com os valores: `curso1={titulo: "Typescript",desc: "Curso de Typescript",aulas: 25,maxAlunos: 10
+}` podendo ser feito quantas vezes forem necessárias <br>
+-> Também é possível adicionar uma propriedade opcional, da mesma forma feita anteriormente `interface curso{titulo:string, desc?:string}`, deixando a descrição como um valor que pode ou não ser preenchido.
+
+## Aula 28
+
+### INTERFACE PT2
+
+-> É possível criar funções em interfaces <br>
+-> É possível usar o `extends` em interfaces também, criando interfaces que herdam a base <br>
+-> É possível aplicar um INTERFACE à uma CLASSE da seguinte maneira `Conta implements Tributos{}` <br>
+-> A interface passa a ser uma regra do que deve ser adicionado na classe, pois caso haja coisas que estejam dentro da interface não estejam dentro da classe, irá dar erro <br>
+-> A interface é uma "assinatura" da classe, obrigando a mesma a passar tudo que for necessário
