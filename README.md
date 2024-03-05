@@ -149,7 +149,7 @@ Canal CFB Cursos: https://www.youtube.com/@cfbcursos
 
 ### CONVERSÃO DE VALOR COM RESULTADO DE FUNÇÃO
 
--> Ao fazer uma função (exemplo numérica) e colocar o valor em uma variável, é possível mudar o tipo da variável da seguinte forma: `let somaString:string = soma2(8,2).toString()`
+-> Ao fazer uma função (exemplo numérica) e colocar o valor em uma variável, é possível mudar o tipo da variável da seguinte forma: `let somaString:string = soma(8,2).toString()`
 
 ## Aula 13
 
@@ -203,34 +203,34 @@ Canal CFB Cursos: https://www.youtube.com/@cfbcursos
 
 ### MÉTODOS
 
--> Ao invés de ficar digitando `console.log()` para cada elemento da classe construida é muito mais fácil criar um método `info(){console.log('nome: this.nome'}` e colocar todas as informações necessárias lá dentro
+-> Ao invés de ficar digitando `console.log()` para cada elemento da classe construida é muito mais fácil criar um método `info(){console.log('nome: this.nome'}` e colocar todas as informações necessárias lá dentro  <br>
 -> É perigoso deixar as informações todas abertas, pois qualquer um pode ir e modificar as classes instanciadas, portanto é necessário proteger e modificá-las através de métodos
 
 ## Aula 19
 
 ### MODIFICADORES DE ACESSO
 
--> Público: um método ou propriedade com public pode ser acessado em qualquer lugar, dentro ou fora da classe, ou pelos filhos da classe.
-- `public nome:string`
--> Privado: quando definido como privado, o método ou propriedade não pode mais ser acessado fora da classe. Fazendo com que o programa fique muito mais controlável, definindo valores válidos para cada propriedade.
-- `private ram:number`
--> Protected: Não pode ser alterada fora da classe, mas pode ser alterado por filhas da classe
+-> Público: um método ou propriedade com public pode ser acessado em qualquer lugar, dentro ou fora da classe, ou pelos filhos da classe.  <br>
+- `public nome:string`  <br>
+-> Privado: quando definido como privado, o método ou propriedade não pode mais ser acessado fora da classe. Fazendo com que o programa fique muito mais controlável, definindo valores válidos para cada propriedade. <br>
+- `private ram:number` <br>
+-> Protected: Não pode ser alterada fora da classe, mas pode ser alterado por filhas da classe <br>
 - `protected ligado:boolean`
 
 ## Aula 20
 
 ### HERANÇA - EXTENDS
 
--> Para uma classa herdar a outra é necessária a seguinte estrutura: Criação da Superclass (estrutura padrão), criação da classe filha: `class ClasseFilha extends Classe{}`
+-> Para uma classe herdar a outra é necessária a seguinte estrutura: Criação da Superclass (estrutura padrão), criação da classe filha: `class ClasseFilha extends SuperClasse{}` <br>
 -> A "ClasseFilha" tem todos os métodos e propriedades do pai sem precisar digitar nada nas mesma, podendo ser instanciada passando parâmetros que só seriam possíveis passar na superclass
 
 ## Aula 21
 
 ### HERANÇA - SUPER
 
--> Ao não usar um construtor na classe filho, ele automaticamente pega o construtor da classe pai
--> A classe `super()` sempre faz referência a classe pai da atual
--> É necessário passar os parâmetros da classe pai no `super(param1, param2)` da classe filha 
+-> Ao não usar um construtor na classe filho, ele automaticamente pega o construtor da classe pai <br>
+-> A classe `super()` sempre faz referência a classe pai da atual <br>
+-> É necessário passar os parâmetros da classe pai no `super(param1, param2)` da classe filha  <br>
 -> Usamos o constructor da classe filha para passar novos parâmetros e utilizar os antigos da classe pai
 
 ## Aula 22
