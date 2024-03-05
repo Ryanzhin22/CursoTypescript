@@ -3,6 +3,31 @@ Resumos das aulas do Curso de Typescript desenvolvido através do canal CFB Curs
 Curso Typescript: https://www.youtube.com/watch?v=vcpLrIzIKjI&list=PLx4x_zx8csUhtPMrkiGvFJVE5LX8Qat5s&index=1&pp=iAQB <br>
 Canal CFB Cursos: https://www.youtube.com/@cfbcursos
 
+## Aula 01
+
+### Ambiente
+
+-> Necessário instalar: <br>
+-> Visual Studio Code <br>
+-> Node.js <br>
+-> Typescript (por npm) <br>
+
+## Aula 02
+
+### COMPILAR TS
+
+-> É possível compilar um arquivo Typescript usando o comando `tsc nomeArquivo.ts` <br>
+-> Também é possível usar o watch
+
+## Aula 03
+
+### CONFIGURANDO ARQUIVO
+
+-> O comando `tsc --init` faz com que um arquivo Typescript de configurações seja inicializado na pasta do projeto <br>
+-> O `target` com o resultado de "ESNext" faz com que o typescript compile os arquivos na última versão do ECMAscript <br>
+-> O `rootDirs` com o resultado de ["./source"] faz com que todos os arquivos Typescript fiquem na pasta source <br>
+-> O `outDir` com resultado de ["./build"] faz com que todos arquivos compilados em Javascript fiquem na pasta build
+
 ## Aula 04
 
 ### WATCH 
@@ -77,7 +102,7 @@ Canal CFB Cursos: https://www.youtube.com/@cfbcursos
 
 ### NULL
 
--> Valor NULO
+-> Valor NULO <br>
 -> O nulo é UM TIPO, portanto uma variável pode receber a tipagem `null`. Exemplo: `let aNome:string|null`, porém, ela ainda precisa ser definida com o tipo nulo, não podendo ficar vazia: `aNome=null` <br>
 
 ### UNDEFINED
@@ -95,3 +120,127 @@ Canal CFB Cursos: https://www.youtube.com/@cfbcursos
 -> Porém, ao colocar o valor de nome em outra variável COM TIPO, o typescript não permitirá. Por mais que ele tenha recebido um número, ele NÃO É DO TIPO NUMBER. <br>
 -> Só pode ser atribuido em variáveis do tipo UNKNOWN e ANY <br>
 -> Unknown pode receber qualquer valor
+
+## Aula 11
+
+### TYPE ASSERTION
+
+-> Ao tentar associar uma variável originalmente do tipo unknown a outra com outro tipo, o Typescript não permitirá <br>
+-> Por isso será necessário fazer um Type Assertion `varNumber = <number>varUnknown` <br>
+-> Type Assertion funciona para o tipo UNKNOWN, portanto se precisar utilizar isso em variáveis que são seguem outras tipagens, será necessário primeiramente converter para UNKNOWN: `varNumber=<number><unknown>varString`
+
+### TYPECAST 
+
+-> O Typecast irá ser útil para a conversão de tipos <br>
+-> Caso seja necessário ir de String para Number: `varNumber = Number.parseInt(varString)` <br>
+-> Caso seja necessário ir de Number para String: `varString = varNumber.toString()`
+
+## Aula 12
+
+### FUNÇÕES VOID
+
+-> `function logar(user:string,password:string):void{ // conteúdo }` <br>
+-> A palavra-chave `void` é usada para indicar que uma função não retorna nenhum valor, ou seja, ela pode fazer uma operação mas o resultado não pode ser acomplado em nenhuma variável. <br>
+
+### FUNÇÕES COM TIPO
+
+-> `function soma2(n1:number, n2:number):number{ // conteúdo + return em NUMBER }` <br>
+-> Da mesma forma que o `void` não retorna nada, o `number` irá retornar um valor numérico capaz de ser associado a uma variável <br>
+
+### CONVERSÃO DE VALOR COM RESULTADO DE FUNÇÃO
+
+-> Ao fazer uma função (exemplo numérica) e colocar o valor em uma variável, é possível mudar o tipo da variável da seguinte forma: `let somaString:string = soma(8,2).toString()`
+
+## Aula 13
+
+### PARÂMETROS PADRÕES
+
+-> É possível fazer um parâmetro padrão para um função, caso não seja passada nada para o mesmo <br>
+-> `function soma(n1:number=1, n2:number=3):number{ //conteudo }` <br>
+-> No caso acima, a variável n1 receberá por padrão 1 e a n2 receberá 3, caso nenhum valor for passado
+
+### PARÂMETROS OPCIONAIS
+
+-> Também é possível definir um parâmetro opcional. Caso o parâmetro não seja preenchido, o sistema retornará o mesmo como UNDEFINED <br>
+-> `function novoUser(user:string, password:string, name?:string):void{ //conteudo }` <br>
+-> Se caso `name` não for passado, seu valor padrão será UNDEFINED
+
+## Aula 14
+
+### ARROW FUNCTION
+
+-> As arrow function não são lidas primeiro no código como as functions padrões do Javascript, e sua sintaxe também é diferente <br>
+-> Assim como no Javascript é possível utilizar de funções anônimas no seu código <br>
+-> Elas tem a seguinte estrutura: `const teste = (txt:string):void => { //conteudo }` 
+
+## Aula 15
+
+### PARÂMETRO REST
+
+-> Para utilizar o Rest no Typescript será necessário definir seu tipo e que ele é um ARRAY <br>
+-> Essa é a estrutura de uma função com REST `function Soma(...valor:number[]){ //Conteudo}` <br>
+-> O REST serve para passar uma quantidade ilimitada de parâmetros para uma função
+
+## Aula 16
+
+### CLASSES
+
+-> Assim como no Javascript podemos criar classes
+-> Para criar uma classe basta fazer assim: `class Computador{ nome:string, ram:number, cpu:number, ligado:boolean }`
+-> Para iniciar uma classe basta fazer: `const pc1 = new Computador`
+-> Para definir um parâmetro da classe: `pc.name="Gamer"`
+
+## Aula 17
+
+### FUNÇÃO CONSTRUTORA
+
+-> É a função chamada no ato da instanciação da classe <br>
+-> Para chamar o constructor basta fazer dentro da class: `constructor(nome:number){this.nome=nome}` <br>
+-> O `this` faz referência a classe onde a propriedade está <br>
+-> Agora para iniciar uma classe nova passando o nome da mesma será necessário: `const pc1 = new Computador("Gamer")`
+
+## Aula 18
+
+### MÉTODOS
+
+-> Ao invés de ficar digitando `console.log()` para cada elemento da classe construida é muito mais fácil criar um método `info(){console.log('nome: this.nome'}` e colocar todas as informações necessárias lá dentro  <br>
+-> É perigoso deixar as informações todas abertas, pois qualquer um pode ir e modificar as classes instanciadas, portanto é necessário proteger e modificá-las através de métodos
+
+## Aula 19
+
+### MODIFICADORES DE ACESSO
+
+-> Público: um método ou propriedade com public pode ser acessado em qualquer lugar, dentro ou fora da classe, ou pelos filhos da classe.  <br>
+- `public nome:string`  <br>
+-> Privado: quando definido como privado, o método ou propriedade não pode mais ser acessado fora da classe. Fazendo com que o programa fique muito mais controlável, definindo valores válidos para cada propriedade. <br>
+- `private ram:number` <br>
+-> Protected: Não pode ser alterada fora da classe, mas pode ser alterado por filhas da classe <br>
+- `protected ligado:boolean`
+
+## Aula 20
+
+### HERANÇA - EXTENDS
+
+-> Para uma classe herdar a outra é necessária a seguinte estrutura: Criação da Superclass (estrutura padrão), criação da classe filha: `class ClasseFilha extends SuperClasse{}` <br>
+-> A "ClasseFilha" tem todos os métodos e propriedades do pai sem precisar digitar nada nas mesma, podendo ser instanciada passando parâmetros que só seriam possíveis passar na superclass
+
+## Aula 21
+
+### HERANÇA - SUPER
+
+-> Ao não usar um construtor na classe filho, ele automaticamente pega o construtor da classe pai <br>
+-> A classe `super()` sempre faz referência a classe pai da atual <br>
+-> É necessário passar os parâmetros da classe pai no `super(param1, param2)` da classe filha  <br>
+-> Usamos o constructor da classe filha para passar novos parâmetros e utilizar os antigos da classe pai
+
+## Aula 22
+
+### HERANÇA - PROTECTED
+
+-> Para acessar um parâmetro da classe pai na classe filha, protegendo o mesmo de ser modificado externamente, é necessário usar o PROTECTED no que será utilizado.
+
+## Aula 23 
+
+## HERANÇA - PROTECTED PT2
+
+-> Para usar um método da classe pai na classe filha, fazendo modificações no mesmo, basta chamá-lo pelo super: `super.info()` e logo em seguida fazer as moficações necessárias: `console.log(cpf...)`
