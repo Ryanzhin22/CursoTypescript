@@ -174,3 +174,73 @@ Canal CFB Cursos: https://www.youtube.com/@cfbcursos
 -> Elas tem a seguinte estrutura: `const teste = (txt:string):void => { //conteudo }` 
 
 ## Aula 15
+
+### PARÂMETRO REST
+
+-> Para utilizar o Rest no Typescript será necessário definir seu tipo e que ele é um ARRAY <br>
+-> Essa é a estrutura de uma função com REST `function Soma(...valor:number[]){ //Conteudo}` <br>
+-> O REST serve para passar uma quantidade ilimitada de parâmetros para uma função
+
+## Aula 16
+
+### CLASSES
+
+-> Assim como no Javascript podemos criar classes
+-> Para criar uma classe basta fazer assim: `class Computador{ nome:string, ram:number, cpu:number, ligado:boolean }`
+-> Para iniciar uma classe basta fazer: `const pc1 = new Computador`
+-> Para definir um parâmetro da classe: `pc.name="Gamer"`
+
+## Aula 17
+
+### FUNÇÃO CONSTRUTORA
+
+-> É a função chamada no ato da instanciação da classe <br>
+-> Para chamar o constructor basta fazer dentro da class: `constructor(nome:number){this.nome=nome}` <br>
+-> O `this` faz referência a classe onde a propriedade está <br>
+-> Agora para iniciar uma classe nova passando o nome da mesma será necessário: `const pc1 = new Computador("Gamer")`
+
+## Aula 18
+
+### MÉTODOS
+
+-> Ao invés de ficar digitando `console.log()` para cada elemento da classe construida é muito mais fácil criar um método `info(){console.log('nome: this.nome'}` e colocar todas as informações necessárias lá dentro
+-> É perigoso deixar as informações todas abertas, pois qualquer um pode ir e modificar as classes instanciadas, portanto é necessário proteger e modificá-las através de métodos
+
+## Aula 19
+
+### MODIFICADORES DE ACESSO
+
+-> Público: um método ou propriedade com public pode ser acessado em qualquer lugar, dentro ou fora da classe, ou pelos filhos da classe.
+- `public nome:string`
+-> Privado: quando definido como privado, o método ou propriedade não pode mais ser acessado fora da classe. Fazendo com que o programa fique muito mais controlável, definindo valores válidos para cada propriedade.
+- `private ram:number`
+-> Protected: Não pode ser alterada fora da classe, mas pode ser alterado por filhas da classe
+- `protected ligado:boolean`
+
+## Aula 20
+
+### HERANÇA - EXTENDS
+
+-> Para uma classa herdar a outra é necessária a seguinte estrutura: Criação da Superclass (estrutura padrão), criação da classe filha: `class ClasseFilha extends Classe{}`
+-> A "ClasseFilha" tem todos os métodos e propriedades do pai sem precisar digitar nada nas mesma, podendo ser instanciada passando parâmetros que só seriam possíveis passar na superclass
+
+## Aula 21
+
+### HERANÇA - SUPER
+
+-> Ao não usar um construtor na classe filho, ele automaticamente pega o construtor da classe pai
+-> A classe `super()` sempre faz referência a classe pai da atual
+-> É necessário passar os parâmetros da classe pai no `super(param1, param2)` da classe filha 
+-> Usamos o constructor da classe filha para passar novos parâmetros e utilizar os antigos da classe pai
+
+## Aula 22
+
+### HERANÇA - PROTECTED
+
+-> Para acessar um parâmetro da classe pai na classe filha, protegendo o mesmo de ser modificado externamente, é necessário usar o PROTECTED no que será utilizado.
+
+## Aula 23 
+
+## HERANÇA - PROTECTED PT2
+
+-> Para usar um método da classe pai na classe filha, fazendo modificações no mesmo, basta chamá-lo pelo super: `super.info()` e logo em seguida fazer as moficações necessárias: `console.log(cpf...)`
