@@ -1,0 +1,14 @@
+"use strict";
+let aValor;
+let bValor;
+let cValor;
+aValor = 10;
+bValor = "10";
+aValor = Number.parseInt(bValor);
+console.log(aValor);
+console.log(typeof (aValor));
+aValor = 10;
+bValor = '10';
+bValor = aValor.toString();
+console.log(bValor);
+console.log(typeof (bValor));
