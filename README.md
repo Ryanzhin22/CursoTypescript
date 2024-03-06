@@ -326,5 +326,40 @@ Canal CFB Cursos: https://www.youtube.com/@cfbcursos
 -> Instanciando: `const carro1 = new Veiculos.Carro("Onix")` <br>
 -> Classes no mesmo namespace não precisam ser exportadas <br>
 
+## Aula 34
+
+### USANDO TODOS CONHECIMENTOS ADQUIRIDOS
+
+-> Veja a aula, muitos conceitos já abordados foram utilizados
+
+## Aula 35
+
+### DESESTRUTURAÇÃO
+
+-> Pode ser feita em Arrays e Objetos <br>
+-> Ao querer armazenar os valores do array `let av=[10,20,30,40]` nas variaveis `let valor1, valor2, valor3, valor4`, sem a desestruturação será preciso fazer `valor=av[0]`, para cada valor <br>
+-> Porém, com a desestruturação, é possivel fazer: `let [valor1,valor2,valor3,valor4] = av` <br>
+-> Outros exemplos: <br>
+-> ![Screenshot_321](https://github.com/Ryanzhin22/CursoTypescript/assets/103447125/68c4265e-e9a0-4148-b108-f38168091d87)
+
+## Aula 36
+
+### DESESTRUTURAÇÃO 
+
+-> Mais exemplos de desestruturação foram mostrados <br>
+-> ![Screenshot_322](https://github.com/Ryanzhin22/CursoTypescript/assets/103447125/d8825e9c-aeb1-49de-becd-80929f02ba6b) <br>
+-> Exemplo 1: o `n3` recebe o spread, onde será preenchido com todos os valores do array sem contar os que já foram preenchidos pelo `n1` e `n2` <br>
+-> Exemplo 2: é um simples exemplo de como usar um return de uma função com desestruturação <br>
+-> Exemplo 3: é uma forma de pegar todas as palavras do `texto` e colocar em um array, podendo ser possível botar cada palavra em uma variável.
+
+## Aula 37
+
+### STATIC
+
+-> Serve para criar "membros estáticos" sendo eles, métodos ou propriedades <br>
+-> Esses membros estão associados a classe e não a instância <br>
+-> ![Screenshot_323](https://github.com/Ryanzhin22/CursoTypescript/assets/103447125/b20e984a-f377-40b8-96b6-85722ac955c0) <br>
+-> Não é necessário instaciar `Globais` para mudar o valor de `teste` <br>
+-> Basta fazer `Globais.teste = 10` e o valor será modificado
 
 
