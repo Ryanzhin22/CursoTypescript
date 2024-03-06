@@ -297,3 +297,34 @@ Canal CFB Cursos: https://www.youtube.com/@cfbcursos
 -> Ao imprimir: `console.log(funcaoTest<number,string>(10,"12"))` output: `12` <br>
 -> Também é possível usar generics em classes: <br>
 ![Screenshot_317](https://github.com/Ryanzhin22/CursoTypescript/assets/103447125/8e408444-5f7b-4ce6-b97a-f945a6eb11f7)
+
+## Aula 30
+
+### MÓDULOS
+
+-> Parecido com o React, podemos exportar e importar arquivos para dentro e fora uns dos outros <br>
+-> Para exportar: <br>
+-> ![Screenshot_318](https://github.com/Ryanzhin22/CursoTypescript/assets/103447125/c6be3f6b-4547-45ef-ada2-8dd20cc88290) <br>
+-> Para importar: `import { Pessoa, Objeto } from "./Classes"` <br>
+-> Agora basta utilizar as classes no arquivo onde foram importadas
+
+## Aula 31 
+
+### MÓDULOS - EXPORT
+
+-> Para exportar mais de um arquivo em uma linha é só fazer no final do código `export {Coisas, Pessoa ,Objeto}` <br>
+-> Para fazer um export default: `export default Pessoa` <br>
+-> Para importar o export default não será necessário as chaves `import Pessoa, {Coisas,Objeto} from ...`
+
+## Aula 32 e 33
+
+### NAMESPACE
+
+-> Namespace é uma estrutura para organizar o código com os nomes de cada respectiva coisa <br>
+-> ![Screenshot_319](https://github.com/Ryanzhin22/CursoTypescript/assets/103447125/0590f749-e075-4981-bff4-0764c288fcdd) <br>
+-> Para instanciar um objeto das classes acima, será preciso fazer com que a classe desejada tenha o export: `export class Carro{ //conteudo }` <br>
+-> Instanciando: `const carro1 = new Veiculos.Carro("Onix")` <br>
+-> Classes no mesmo namespace não precisam ser exportadas <br>
+
+
+
