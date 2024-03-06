@@ -15,15 +15,18 @@ class Conta {
         console.log(`Titular: ${this.titular}`);
         console.log(`Número.: ${this.numero}`);
     }
-    saldoConta() {
+    get saldoConta() {
         return this.saldo;
+    }
+    set saldoConta(saldo) {
+        this.saldo = saldo;
     }
     deposito(valor) {
         if (valor < 0) {
             console.log("Saldo inválido");
             return;
         }
-        this.saldo += valor;
+        this.saldoConta += valor;
     }
     saque(valor) {
         if (valor < 0) {
@@ -31,7 +34,7 @@ class Conta {
             return;
         }
         if (valor <= this.saldo) {
-            this.saldo -= valor;
+            this.saldoConta -= valor;
         }
         else {
             console.log("saldo insuficiente");
@@ -39,11 +42,15 @@ class Conta {
     }
 }
 class ContaPF extends Conta {
+    baseTributo = 10;
     cpf;
     constructor(cpf, titular) {
         super(titular);
         this.cpf = cpf;
         console.log(`Conta PF Criada: ${this.titular}`);
+    }
+    CalcularTributo(taxa) {
+        return taxa * this.baseTributo;
     }
     info() {
         console.log("-----------------------");
@@ -90,9 +97,11 @@ class ContaPJ extends Conta {
 }
 const c1 = new ContaPF(42322124204, "Ryan");
 const c2 = new ContaPJ(14123167864, "Ryanzhin22");
-console.log(c1.saldoConta());
-console.log(c2.saldoConta());
 c1.deposito(1000);
 c2.deposito(5000);
-console.log(c1.saldoConta());
-console.log(c2.saldoConta());
+console.log(c1.saldoConta);
+console.log(c2.saldoConta);
+c1.saque(500);
+c2.saque(2500);
+console.log(c1.saldoConta);
+console.log(c2.saldoConta);

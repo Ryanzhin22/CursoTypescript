@@ -1,7 +1,7 @@
-class Conta{
-    protected numero:number
+abstract class Conta{
+    private readonly numero:number
     protected titular:string
-    protected saldo:number
+    private saldo:number
     constructor(titular:string){
         this.numero = this.gerarNumeroConta()
         this.titular = titular
@@ -14,27 +14,47 @@ class Conta{
         console.log(`Titular: ${this.titular}`)
         console.log(`Número.: ${this.numero}`)
     }
-    public saldoConta():number{
+    get saldoConta():number{
         return this.saldo
     } 
+    private set saldoConta(saldo:number){
+        this.saldo = saldo
+    }
     protected deposito(valor:number){
-        this.saldo += valor
+        if(valor < 0){
+            console.log("Saldo inválido")
+            return
+        }
+        this.saldoConta += valor
     }
     protected saque(valor:number){
+        if(valor < 0){
+            console.log("Saldo inválido")
+            return
+        }
         if(valor <= this.saldo){
-            this.saldo -= valor
+            this.saldoConta -= valor
         }else{
             console.log("saldo insuficiente")
         }
     }
 }
 
-class ContaPF extends Conta{
+interface Tributos{
+    baseTributo:number
+    CalcularTributo(taxa:number):void
+}
+
+class ContaPF extends Conta implements Tributos{
+    baseTributo=10
     cpf:number
     constructor(cpf:number, titular:string){
         super(titular)
         this.cpf = cpf
         console.log(`Conta PF Criada: ${this.titular}`)
+    }
+    CalcularTributo(taxa: number): number {
+        return taxa*this.baseTributo
     }
     info(){
         console.log("-----------------------")
@@ -47,9 +67,11 @@ class ContaPF extends Conta{
             console.log("Valor muito alto para esse tipo de conta")
         }else{
             super.deposito(valor)
-            this.saldo += valor
         }
 
+    }
+    public saque(valor:number){
+        super.saque(valor)
     }
 }
 
@@ -71,21 +93,25 @@ class ContaPJ extends Conta{
             console.log("Valor muito alto para esse tipo de conta")
         }else{
             super.deposito(valor)
-            this.saldo += valor
         }
-
+    }
+    public saque(valor:number){
+        super.saque(valor)
     }
 }
 
 const c1 = new ContaPF(42322124204, "Ryan")
 const c2 = new ContaPJ(14123167864, "Ryanzhin22")
 
-c1.deposito(100)
-c1.deposito(100)
-c1.deposito(100)
-c2.deposito(2000)
-console.log(c1.saldoConta())
-console.log(c2.saldoConta())
+c1.deposito(1000)
+c2.deposito(5000)
+console.log(c1.saldoConta)
+console.log(c2.saldoConta)
+c1.saque(500)
+c2.saque(2500)
+console.log(c1.saldoConta)
+console.log(c2.saldoConta)
+// console.log(c1.saldoConta)
 
 // c1.info() // Pegando info da classe filha
 // c2.info()
