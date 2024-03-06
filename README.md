@@ -272,7 +272,7 @@ Canal CFB Cursos: https://www.youtube.com/@cfbcursos
 
 ### INTERFACE
 
--> Parecido com um objeto litaral para criar uma interface basta fazer: `interface curso{titulo:string, desc:string}` <br>
+-> Parecido com um objeto literal para criar uma interface basta fazer: `interface curso{titulo:string, desc:string}` <br>
 -> Para criar vários cursos de forma mais fácil é só fazer: `let curso1:curso` e preencher com os valores: `curso1={titulo: "Typescript",desc: "Curso de Typescript",aulas: 25,maxAlunos: 10
 }` podendo ser feito quantas vezes forem necessárias <br>
 -> Também é possível adicionar uma propriedade opcional, da mesma forma feita anteriormente `interface curso{titulo:string, desc?:string}`, deixando a descrição como um valor que pode ou não ser preenchido.
@@ -283,6 +283,17 @@ Canal CFB Cursos: https://www.youtube.com/@cfbcursos
 
 -> É possível criar funções em interfaces <br>
 -> É possível usar o `extends` em interfaces também, criando interfaces que herdam a base <br>
--> É possível aplicar um INTERFACE à uma CLASSE da seguinte maneira `Conta implements Tributos{}` <br>
+-> É possível aplicar uma INTERFACE à uma CLASSE da seguinte maneira `Classe implements Interface{}` <br>
 -> A interface passa a ser uma regra do que deve ser adicionado na classe, pois caso haja coisas que estejam dentro da interface não estejam dentro da classe, irá dar erro <br>
--> A interface é uma "assinatura" da classe, obrigando a mesma a passar tudo que for necessário
+
+## Aula 29
+
+### GENERICS
+
+-> Generics é uma forma de tipar um elemento parecido com o `any` <br>
+-> Sua sintaxe é a seguinte em uma função: `function funcaoTest<T>(valor1:T):T{ return valor1 }` <br>
+-> Ao imprimir no console, deverá ser feito da seguinte forma: `console.log(funcaoTest<number>(10))` <br>
+-> É possível passar mais de um generics: `function funcaoTest<T,U>(valor1:T, valor2:U):U{ return valor2 > ` <br>
+-> Ao imprimir: `console.log(funcaoTest<number,string>(10,"12"))` output: `12` <br>
+-> Também é possível usar generics em classes: <br>
+![Screenshot_317](https://github.com/Ryanzhin22/CursoTypescript/assets/103447125/8e408444-5f7b-4ce6-b97a-f945a6eb11f7)
