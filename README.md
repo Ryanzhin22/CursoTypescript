@@ -239,8 +239,92 @@ Canal CFB Cursos: https://www.youtube.com/@cfbcursos
 
 -> Para acessar um parâmetro da classe pai na classe filha, protegendo o mesmo de ser modificado externamente, é necessário usar o PROTECTED no que será utilizado.
 
-## Aula 23 
+## Aula 23 e 24
 
-## HERANÇA - PROTECTED PT2
+### HERANÇA - PROTECTED PT2
 
 -> Para usar um método da classe pai na classe filha, fazendo modificações no mesmo, basta chamá-lo pelo super: `super.info()` e logo em seguida fazer as moficações necessárias: `console.log(cpf...)`
+
+## Aula 25
+
+### GETTER E SETTER
+
+-> Getter: Vai PEGAR um elemento (GET) <br>
+-> Setter: Vai SETTAR um elemento, modificando seu valor (SET) <br>
+-> Ao aplicar `get` ou `set` em um método, não é necessário usá-lo como função, pois ele vira uma propriedade <br>
+-> É possível modificar o acesso de um get ou set (Private, public ou protected)
+
+## Aula 26 
+
+### CLASSES ABSTRATAS
+
+-> Uma classe abstrata não pode ser instanciada, pode apenas ser herdada e servindo como base para outras classes <br>
+-> Não é possível criar um objeto com uma classe abstrata: Classe: `abstract class Conta{//conteudo}` Instanciar: `const c3 = new Conta("Nome")` = Erro <br>
+-> Também é possível aplicar `readonly` as propriedades onde a mesma não poderá ser modificada nem mesmo dentro da classe pai.
+
+## Aula 27
+
+### OBJETOS LITERAIS
+
+-> Para criar um objeto literal basta seguir a seguinte estrutura: `let curso1:{titulo:string, desc:string}` <br>
+-> Para preencher o objeto literal faça o seguinte: `curso1={titulo:"Typescript", desc:"Curso de Typescript"}` <br>
+-> Porém, para criar mais "cursos" será necessário repetir essas mesmas estruturas várias vezes, e isso poderia ser facilitado com a criação de uma Interface
+
+### INTERFACE
+
+-> Parecido com um objeto literal para criar uma interface basta fazer: `interface curso{titulo:string, desc:string}` <br>
+-> Para criar vários cursos de forma mais fácil é só fazer: `let curso1:curso` e preencher com os valores: `curso1={titulo: "Typescript",desc: "Curso de Typescript",aulas: 25,maxAlunos: 10
+}` podendo ser feito quantas vezes forem necessárias <br>
+-> Também é possível adicionar uma propriedade opcional, da mesma forma feita anteriormente `interface curso{titulo:string, desc?:string}`, deixando a descrição como um valor que pode ou não ser preenchido.
+
+## Aula 28
+
+### INTERFACE PT2
+
+-> É possível criar funções em interfaces <br>
+-> É possível usar o `extends` em interfaces também, criando interfaces que herdam a base <br>
+-> É possível aplicar uma INTERFACE à uma CLASSE da seguinte maneira `Classe implements Interface{}` <br>
+-> A interface passa a ser uma regra do que deve ser adicionado na classe, pois caso haja coisas que estejam dentro da interface não estejam dentro da classe, irá dar erro <br>
+
+## Aula 29
+
+### GENERICS
+
+-> Generics é uma forma de tipar um elemento parecido com o `any` <br>
+-> Sua sintaxe é a seguinte em uma função: `function funcaoTest<T>(valor1:T):T{ return valor1 }` <br>
+-> Ao imprimir no console, deverá ser feito da seguinte forma: `console.log(funcaoTest<number>(10))` <br>
+-> É possível passar mais de um generics: `function funcaoTest<T,U>(valor1:T, valor2:U):U{ return valor2 > ` <br>
+-> Ao imprimir: `console.log(funcaoTest<number,string>(10,"12"))` output: `12` <br>
+-> Também é possível usar generics em classes: <br>
+![Screenshot_317](https://github.com/Ryanzhin22/CursoTypescript/assets/103447125/8e408444-5f7b-4ce6-b97a-f945a6eb11f7)
+
+## Aula 30
+
+### MÓDULOS
+
+-> Parecido com o React, podemos exportar e importar arquivos para dentro e fora uns dos outros <br>
+-> Para exportar: <br>
+-> ![Screenshot_318](https://github.com/Ryanzhin22/CursoTypescript/assets/103447125/c6be3f6b-4547-45ef-ada2-8dd20cc88290) <br>
+-> Para importar: `import { Pessoa, Objeto } from "./Classes"` <br>
+-> Agora basta utilizar as classes no arquivo onde foram importadas
+
+## Aula 31 
+
+### MÓDULOS - EXPORT
+
+-> Para exportar mais de um arquivo em uma linha é só fazer no final do código `export {Coisas, Pessoa ,Objeto}` <br>
+-> Para fazer um export default: `export default Pessoa` <br>
+-> Para importar o export default não será necessário as chaves `import Pessoa, {Coisas,Objeto} from ...`
+
+## Aula 32 e 33
+
+### NAMESPACE
+
+-> Namespace é uma estrutura para organizar o código com os nomes de cada respectiva coisa <br>
+-> ![Screenshot_319](https://github.com/Ryanzhin22/CursoTypescript/assets/103447125/0590f749-e075-4981-bff4-0764c288fcdd) <br>
+-> Para instanciar um objeto das classes acima, será preciso fazer com que a classe desejada tenha o export: `export class Carro{ //conteudo }` <br>
+-> Instanciando: `const carro1 = new Veiculos.Carro("Onix")` <br>
+-> Classes no mesmo namespace não precisam ser exportadas <br>
+
+
+
