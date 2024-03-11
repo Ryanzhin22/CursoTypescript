@@ -1,5 +1,5 @@
 # CursoTypescript
-Resumos das aulas do Curso de Typescript desenvolvido através do canal CFB Cursos - Em desenvolvimento <br>
+Resumos das aulas do Curso de Typescript desenvolvido através do canal CFB Cursos - **Concluído** <br>
 Curso Typescript: https://www.youtube.com/watch?v=vcpLrIzIKjI&list=PLx4x_zx8csUhtPMrkiGvFJVE5LX8Qat5s&index=1&pp=iAQB <br>
 Canal CFB Cursos: https://www.youtube.com/@cfbcursos
 
